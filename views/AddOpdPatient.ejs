@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSY Hospital</title>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+</head>
+<body >
+    <h1 class="heading">Adding OPD Patient here !</h1>
+    <h2 class="heading">Form</h2>
+
+    <form action="/SubmitOpdPatient" method="post" class="form1">
+        <label for="name">Name:</label>
+		<input type="text" placeholder="Enter Name of Patient" name="name" class="input1"><br>
+        <label for="number">Mobile Number:</label>
+		<input type="number" placeholder="Enter Phone Number of Patient" name="number" class="input1"><br>
+        <label for="city">City:</label>
+		<input type="text" placeholder="Enter city" name="city" class="input1"><br>
+		<!-- <input type="text" placeholder="Enter Age" name="age"> -->
+        <label for="age">Age:</label>
+        <select name="age" id="age" class="input1">
+            <option value="Child">Child(less than 15)</option>
+            <option value="Teenagers">Teenagers(15-30)</option>
+            <option value="Adults">Adults(30-50)</option>
+            <option value="Senior">Senior(greater than 50)</option>
+        </select><br>
+        <label for="symtoms">Symtoms:</label>
+        <select name="symtoms" id="age" class="input1">
+            <option value="Eye Pain">Eye Pain</option>
+            <option value="Headache">Headache</option>
+            <option value="Bone Pain">Bone Pain</option>
+        </select><br>
+		<!-- <input type="text" placeholder="Enter Symtoms" name="symtoms"><br> -->
+        <label for="fee">Fee:</label>
+		<input type="text" placeholder="Rs.100" name="fee" readonly class="input1"><br>
+		<button type="submit"  class="input1">Add</button>
+        
+	</form>
+    <form action="/" method="get">
+        <button style="padding:10px;" style="margin:20px;" type="submit">Return</button>
+    </form>
+
+    
+</body>
+</html>

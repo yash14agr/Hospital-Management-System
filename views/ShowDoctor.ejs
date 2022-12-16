@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RSY Hospital</title>
+        <link rel='stylesheet' href='/stylesheets/home.css' />
+        <script src="https://kit.fontawesome.com/938981a4f7.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: grey;">
+    <h1 style="color:yellow">You can see the database of Doctor here !</h1>
+
+    <div style="color:white;">
+    <table class="table2">
+        <tr class="subhead">
+            <td>ID</td>
+            <td>NAME</td>
+            <td>NUMBER</td>
+            <td>CITY</td>
+            <td>SPECIALIZATION</td>
+            <td>DEPARTMENT</td>
+            <td>EARNING</td>
+            <td>UPDATE</td>
+            <td>DELETE</td>
+        </tr>
+        <% var i=1 %>
+        <% data.forEach((element)=>{%>
+            <tr >
+                <td ><%= i++ %></td> 
+                <td ><%= element.name %></td>
+                <td ><%= element.number %></td>
+                <td ><%= element.city %></td>
+                <td ><%= element.symtoms %></td>
+                <td ><%= element.department %></td>
+                <td ><%= element.earning %></td>
+                <td> 
+                    <form action="/ShowDoctor/update/<%= element._id %>" method="get">
+                        <button style="padding:10px;" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </form>                 
+                </td>
+                <td>
+                    <form action="/ShowDoctor/delete/<%= element._id %>" method="get">
+                        <button style="padding:10px;" type="submit"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    </div>
+
+    <form action="/" method="get">
+        <button style="padding:10px;" type="submit">Return</button>
+    </form>
+
+</body>
+</html>

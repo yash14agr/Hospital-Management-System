@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSY Hospital</title>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+</head>
+<body>
+    <h1 class="heading">Patient is Admitted</h1>
+    <h2>Please fill the form</h2>
+
+    <form action="/SubmitCasualtyPatient" method="post" class="form1">
+        <label for="name">Name:</label>
+		<input type="text" placeholder="Enter Name of Patient" name="name"  class="input1"><br>
+        <label for="number">Mobile Number:</label>
+		<input type="number" placeholder="Enter Phone Number of Patient" name="number" class="input1"><br>
+        <label for="city">City:</label>
+		<input type="text" placeholder="Enter city" name="city" class="input1"><br>
+        <label for="age">Age:</label>
+        <select name="age" id="age" class="input1">
+            <option value="1">Child(less than 15)</option>
+            <option value="2">Teenagers(15-30)</option>
+            <option value="3">Adults(30-50)</option>
+            <option value="4">Senior(greater than 50)</option>
+        </select><br>
+        <label for="symtoms">Symtoms:</label>
+        <select name="symtoms" id="age" class="input1">
+            <option value="Eye Pain">Eye Pain</option>
+            <option value="Headache">Headache</option>
+            <option value="Bone Pain">Bone Pain</option>
+        </select><br>
+		<!-- <input type="text" placeholder="Enter Symtoms" name="symtoms"><br> -->
+        <label for="fee">Fee:</label>
+		<input type="text" placeholder="Rs.200" name="fee" class="input1" readonly><br>
+		<button type="submit" class="input1">Add</button><br>
+	</form>
+
+    <form action="/" method="get">
+        <button style="padding:10px;" style="margin:20px;" type="submit">Return</button>
+    </form>
+
+
+</body>
+</html>

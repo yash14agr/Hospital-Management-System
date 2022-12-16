@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSY Hospital</title>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+</head>
+<body >
+    <h1 class="heading">Adding Doctor here !</h1>
+    <h2 class="heading">Form</h2>
+
+    <form action="/SubmitDoctor" method="post"  class="form1">
+        <label for="name">Name:</label>
+		<input type="text" placeholder="Enter Name" name="name" class="input1"><br>
+        <label for="number">Phone Number:</label>
+		<input type="number" placeholder="Enter Number" name="number" class="input1"><br>
+        <label for="city">City:</label>
+		<input type="text" placeholder="city" name="city" class="input1"><br>
+        <label for="symtoms">Specialization:</label>
+        <input type="text" placeholder="Service (Symtoms)" name="symtoms" id="" class="input1"><br>
+        <label for="symtoms">Department Name:</label>
+        <input type="text" placeholder="Enter Department" name="department" id="" class="input1"><br>
+
+        <label for="earning">Earning:</label>
+		<input type="text" placeholder="Rs.0" name="earning" class="input1" readonly><br>
+		<button style="padding:10px; margin:20px;" type="submit" class="input1">Add</button><br>
+	</form>
+
+    <form action="/" method="get">
+        <button style="padding:10px; margin:10px;" type="submit">Return</button>
+    </form>
+</body>
+</html>

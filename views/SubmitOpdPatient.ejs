@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSY Hospital</title>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+</head>
+<body >
+    <h1 class="heading">Patient has been send to Department:<%= data[0].department %> !</h1>
+    <h1 class="subhead">Patient has been treated by <%= data[0].name %> !</h1>
+    <h3>Details of Patient</h1>
+    <h3>ID: <%= p._id%></h2>
+    <h3>name: <%= p.name%></h2>
+    <h3>number: <%= p.number%></h2>
+    <h3>City: <%= p.city%></h2>
+    <h3>Age: <%= p.age%></h2>
+    <h3>Symtoms: <%= p.symtoms%></h2>
+    <!-- <h2 style="color:yellow">Form</h2> -->
+
+    <form action="/Opd-treated/<%= p._id %>" method="get">
+        <button type="submit" class="button1">patient Treated</button>
+    </form>
+    <form action="/Opd-admit/<%= p._id %>" method="get">
+        <button type="submit" class="button1">Admit Patient</button>
+    </form>
+
+</body>
+</html>
